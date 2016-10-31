@@ -5,12 +5,16 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 require("./app_api/model/db")
+require("./app_api/model/aircraftData")
+
 var routes = require('./app_api/route/index');
+var routesApi = require('./app_server/route/index');
+
 
 var app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'app_server', 'view'));
 app.set('view engine', 'jade');
 
 // uncomment after placing your favicon in /public
@@ -22,7 +26,8 @@ app.use(cookieParser());
 app.use(require('less-middleware')(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/api', routes);
+app.use('/', routes);
+app.use('/api', routesApi);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -12,7 +12,7 @@ var sendJSONresponse = function(res, status, content)
     res.json(content);
 }
 
-/* GET data by the id */
+/* GET data by the id for ClimbTable */
 module.exports.climbTableReadOne = function(req, res) {
   console.log('Finding location details', req.params);
   if (req.params && req.params.climbTableid) {
@@ -40,7 +40,7 @@ module.exports.climbTableReadOne = function(req, res) {
   }
 };
 
-/* GET data by the id */
+/* GET data by the id for FlapsTable */
 module.exports.flapsTableReadOne = function(req, res) {
   console.log('Finding location details', req.params);
   if (req.params && req.params.flapsTableid) {
@@ -68,7 +68,7 @@ module.exports.flapsTableReadOne = function(req, res) {
   }
 };
 
-/* GET data by the id */
+/* GET data by the id for LandingTable */
 module.exports.landingTableReadOne = function(req, res) {
   console.log('Finding location details', req.params);
   if (req.params && req.params.landingTableid) {

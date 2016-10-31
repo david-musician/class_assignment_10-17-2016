@@ -28,3 +28,5 @@ var LandingTable = new mongoose.Schema({
 mongoose.model('ClimbTable', ClimbTable, 'ClimbTable');
 mongoose.model('FlapsTable', FlapsTable, 'FlapsTable');
 mongoose.model('LandingTable', LandingTable, 'LandingTable');
+
+require('./aircraftData');
