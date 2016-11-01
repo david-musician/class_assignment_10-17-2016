@@ -5,8 +5,8 @@ var ctrlAircraftData = require('../controller/airplaneSettings');
 // var ctrlOthers = require('../controllers/others');
 
 /* Locations pages */
-router.get('/', ctrlAircraftData.homelist);
-router.get('/aircraftData', ctrlAircraftData.locationInfo);
+router.get('/', ctrlAircraftData.index);
+//router.get('/aircraftData', ctrlAircraftData.locationInfo);
 //router.get('/location/review/new', ctrlAircraftData.addReview);
 
 /* Other pages */

@@ -5,6 +5,8 @@ var ctrlAirplane = require('../controller/airplane');
 //router.get('/airplane', ctrlAirplane.homelist);
 //router.post('/airplane', ctrlAirplane.locationsCreate);
 
+router.get('/', ctrlAirplane.index);
+
 // Tables
 router.get('/climbTable/:climbTableid', ctrlAirplane.climbTableReadOne);
 router.get('/flapsTable/:flapsTableid', ctrlAirplane.flapsTableReadOne);

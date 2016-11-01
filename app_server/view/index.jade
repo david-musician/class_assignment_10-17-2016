@@ -1,5 +1,19 @@
-extends layout
+//extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  h1 Climb Table
+  each weight in ClimbTable
+    li= climbTableid
+  h1 Flaps Table
+  h1 Landing Table
+   
+   //climbTable.find(function (climbTableid){
+     res.render({climbTableid: airplane});
+   //})
+   
+//app.get('/help', function(req, res){
+  Material.find(function (err, materials){
+    res.render('help', {materials: materials});
+  });
+//);

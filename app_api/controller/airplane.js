@@ -4,6 +4,9 @@ var ClimbTable = mongoose.model('ClimbTable');
 var FlapsTable = mongoose.model('FlapsTable');
 var LandingTable = mongoose.model('LandingTable');
 
+module.exports.index = function(req, res) {
+    res.render('index', { title: 'Airplane Data' })
+};
 
 // utility method for the module
 var sendJSONresponse = function(res, status, content)
