@@ -2,14 +2,10 @@ var express = require('express');
 var router = express.Router();
 var ctrlAircraftData = require('../controller/airplaneSettings');
 
-// var ctrlOthers = require('../controllers/others');
-
-/* Locations pages */
+/* Routes to views */
 router.get('/', ctrlAircraftData.index);
-//router.get('/aircraftData', ctrlAircraftData.locationInfo);
-//router.get('/location/review/new', ctrlAircraftData.addReview);
-
-/* Other pages */
-//router.get('/about', ctrlOthers.about);
+router.get('/climbTable/', ctrlAircraftData.climbTable);
+router.get('/flapsTable/', ctrlAircraftData.flapsTable);
+router.get('/landingTable/', ctrlAircraftData.landingTable);
 
 module.exports = router;

@@ -1,0 +1,61 @@
+h1 Climb Table
+  table
+    thead
+      tr
+        td#special-cell WEIGHT
+        td V FRI Flap 5&deg
+        td V FRI Flap 10&deg
+        td V FRI Flap 15&deg
+        td V CLMB
+      tbody
+      - for (var i = 0; i < table.length; i++){
+      - if (i % 5 === 0){
+      tr
+      - }
+      - if (i % 5 === 0){
+        td#weight-cell #{table[i]} KG
+      - } else {
+        td#regular-cell #{table[i]}
+      - }
+      - }
+  
+  //h1 Flaps Table
+    table
+      thead
+        tr
+          td#special-cell WEIGHT
+          td V FRI Flap 5&deg
+          td V FRI Flap 10&deg
+          td V FRI Flap 15&deg
+          td V CLMB
+      tbody
+      - for (var i = 0; i < table.length; i++){
+      - if (i % 4 === 0){
+      tr
+      - }
+      - if (i % 4 === 0){
+        td#weight-cell #{table[i]} KG
+      - } else {
+        td#regular-cell #{table[i]}
+      - }
+      - }
+  //h1 Landing Table
+    table
+      thead
+        tr
+          td#special-cell WEIGHT
+          td V FRI Flap 5&deg
+          td V FRI Flap 10&deg
+          td V FRI Flap 15&deg
+          td V CLMB
+      tbody
+      - for (var i = 0; i < table.length; i++){
+      - if (i % 5 === 0){
+      tr
+      - }
+      - if (i % 5 === 0){
+        td#weight-cell #{table[i]} KG
+      - } else {
+        td#regular-cell #{table[i]}
+      - }
+      - }
