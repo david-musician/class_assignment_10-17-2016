@@ -4,13 +4,29 @@ html
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
-  body
    .navbar.navbar-default.navbar-fixed-top
       .container
         .navbar-header
           a.navbar-brand(href='/') Home
-
     .container
+      p Current Conditions:
+      br
+      p Temperature: {{ forecast.temperature }} F
+      br
+      p Dewpoint: {{ forecast.dewPoint }} F
+      br
+      p Humidity: {{ forecast.humidity }}
+      br
+      p Wind: {{forecast.windBearing}} at {{forecast.windSpeed}}
+      br
+      p Cloud cover: {{ forecast.cloudCover }}%
+      br
+      p Ozone: {{ forecast.ozone }} ppm
+      br
+      p Chance of Precipitation: {{ forecast.precipProbability }}%
+      br
+      p Nearest Storm Direction: {{forecast.nearestStormBearing}} Distance: {{forecast.nearestStormDistance}} mi
+      br
       block content
 
       footer

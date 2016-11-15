@@ -5,6 +5,19 @@ module.exports.index = function(req, res) {
     res.render('index', { title: 'Airplane Data' })
 };
 
+// Do the request statement stuff, like this:
+/*
+var requestOptions = {
+  url : "http://class-assignment-david-musician.c9users.io/api/climbTable",
+  method : "GET",
+  json : {},
+  qs : {
+    offset : 20
+  }
+};
+*/
+// This should eliminate the 502 bad gateway error.
+
 module.exports.climbTable = function(req, res) {
     ctrlAirplane.climbTable(req, res);
 };
